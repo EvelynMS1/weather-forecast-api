@@ -67,7 +67,7 @@ submitBtn.addEventListener("click", (event) => {
 //when submit click event
 
 function geocity(citySpecified){
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${citySpecified}&limit=1&appid=f879b58236b7e1c5940e21d6ece79cf2`)
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${citySpecified}&limit=1&appid=f879b58236b7e1c5940e21d6ece79cf2`)
 //RESPONSE OBJECT converting to json
 .then((res)=>res.json())
 //json data response readable format
