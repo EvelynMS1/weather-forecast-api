@@ -84,7 +84,7 @@ fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${citySpecified}&limit=1&
 
 //second function for weather forecast
 function cityweather(latitude,longitude){
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=f879b58236b7e1c5940e21d6ece79cf2&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=f879b58236b7e1c5940e21d6ece79cf2&units=imperial`)
     .then((res)=>res.json())
     .then((data)=>{
         console.log(data);
