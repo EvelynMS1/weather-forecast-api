@@ -1,0 +1,50 @@
+.topheader{
+    border-radius: 5px;
+    background-color: #2E0249;
+    padding:12px;
+    
+    
+}
+#headertitle{
+   font-size: 2vw;
+    color:#F73D93;
+    text-align:center;
+}
+.mainweatherdisplay{
+    display:flex;
+    margin:5px;
+    padding:20px;
+    border-radius:5px;
+    background-color: #570A57;
+}
+.sixweatherdisplay{
+    margin:5px;
+    padding:5px;
+    border-radius:5px;
+    background-color: #A91079;
+}
+.searchdiv{
+    border-radius:5px;
+    padding:5px;
+    background-color: #F806CC;
+}
+#mainweather{
+    margin:5px;
+   
+    border-radius:5px;
+    background-color: orange;
+}#miniWeather{
+    margin:10px;
+    border-radius:5px;
+    background-color: #F73D93;
+}
+.smalldivs{
+    background-color: yellowgreen;
+    border:5px;
+    display:inline-block;
+    margin:5px;
+}
+.city-button{
+    display:block;
+    width:100%;
+}
