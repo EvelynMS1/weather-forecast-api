@@ -93,8 +93,9 @@ function cityweather(latitude,longitude){
 }
 function weatherdisplay(data){
   $fiveminiday.innerHTML = '';
-  
+
     const weatherobj = data;
+
     //0 be a variable so that it is iteratable bc the following calls will be for each an every array number
     //methods that can be used is for loops only loop through certain numbers of the array 
 //for every item in array call function weatherProperties
@@ -105,24 +106,28 @@ function weatherdisplay(data){
     //call box creation function 
    weatherProperties(day);
   }
-  propertiesOfdata(weatherobj.list[0])
+  propertiesOfdata(weatherobj.list[0],data)
   
 }
 //create 0 object property weather
 function weatherProperties(data){
+
     const listobj = data;
     const date1 = listobj.dt_txt;
     const icon = listobj.weather[0].icon;
     const temperature = listobj.main.temp;
     const humidity = listobj.main.humidity;
     const windspeed = listobj.wind.speed;
-    const objvalues = [temperature,windspeed,humidity];
+    const objvalues = [`Temp: ${temperature} °F`,`Wind: ${windspeed} MPH`,`Humidity: ${humidity} %`];
     //create html elements to add to div
     //newly created div must be styled iinline block 
 
    const $miniday = document.createElement("div");
    const $datedata = document.createElement("p");
-   $datedata.textContent = date1;
+  // $datedata.textContent = `${cityname} ${date1}`;
+   $datedata.textContent= date1; 
+     
+   console.log($datedata);
    $miniday.append($datedata);
    $fiveminiday.append($miniday);
       var $icondata = document.createElement("img");
@@ -155,7 +160,10 @@ function weatherProperties(data){
 //add properties to a box
 // function boxCreation{
 //add to weatherdiv display 
-function propertiesOfdata(data){  
+function propertiesOfdata(data,dataforcity){   
+  const citydata = dataforcity;
+  const cityname = citydata.city.name;
+  console.log(cityname); 
      $firstWeatherDay.innerHTML ='';
     const listobj = data;
     const date1 = listobj.dt_txt;
@@ -163,11 +171,13 @@ function propertiesOfdata(data){
     const temperature = listobj.main.temp;
     const humidity = listobj.main.humidity;
     const windspeed = listobj.wind.speed;
-    const objvalues = [temperature,windspeed,humidity];  
+    const objvalues = [`Temp: ${temperature} °F`,`Wind: ${windspeed} MPH`,`Humidity: ${humidity} %`];  
     
     const $miniday = document.createElement("div");
-   const $datedata = document.createElement("p");
-   $datedata.textContent = date1;
+   const $datedata = document.createElement("h3");
+  //  $datedata.classList.add("boldcity")
+   $datedata.textContent = `${cityname} ${date1}`;
+  //  $datedata.textContent = date1;
    $miniday.append($datedata);
    $firstWeatherDay.append($miniday);
       var $icondata = document.createElement("img");

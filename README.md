@@ -23,7 +23,7 @@ The motivation behind building this project was for the purpose of using a third
 
 N/A
 ## Usage
-![Weather App](/weather.jpg)  
+![Weather App](./weather.png)  
 
 
 
